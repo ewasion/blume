@@ -1,0 +1,198 @@
+body {
+  font-family: 'Ubuntu Mono', sans-serif;
+  background-image: url('img/bg-dark.png');
+  background-repeat: repeat;
+}
+
+h2 {
+  text-align: center;
+  margin-top:0;
+  padding: 2%;
+  background-image: url('img/bg-settings.png');
+  background-repeat: repeat;
+}
+
+h3 {
+  text-align: center;
+}
+
+pre {
+  display: inline;
+}
+
+span {
+  color: white;
+}
+
+span:hover {
+  color: grey !important; /* Sorry for the !important, couldn't find another way to do what I wanted */
+}
+
+textarea {
+  width: 99%;
+  resize: none;
+}
+
+body > div {
+  color: white;
+  border: 1px solid black;
+  overflow: hidden;
+  position: fixed;
+  zoom: 1;
+  top: 50%;
+  left: 50%;
+  height: 60%;
+  width: 60%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-image: url('img/bg-light.png');
+  background-repeat: repeat;
+}
+
+body > div > div:first-child {
+  position: fixed;
+}
+
+body > div:last-child {
+  overflow-y: auto;
+  opacity: 0;
+  transition: all 200ms;
+  pointer-events: none;
+  color: white;
+}
+
+body > label + div span.fa-times {
+  color: red;
+}
+
+body > label + div span.fa-plus {
+  color: green;
+}
+
+body > label + div > div, body > label + div > noscript > div {
+  overflow: hidden;
+  float: left;
+  padding: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  border: 1px dotted black;
+  display: inline-block;
+  width: 46%;
+  height: 25%;
+}
+
+body > label + div > div:hover, body > label + div > noscript > div:hover {
+  overflow: auto;
+}
+
+body > label + div > div:first-child {
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  position: fixed;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+body > label + div > div > input[type=checkbox]:not(:checked) ~ div > span {
+  pointer-events: none;
+}
+
+body > label + div > div > input[type=checkbox]:not(:checked) ~ div:hover {
+  cursor: not-allowed;
+}
+
+body > label + div > noscript h3 {
+  color: red;
+}
+
+a {
+  color: #ed490a;
+}
+
+div[id^=add-] { /* shhhhh */
+  display: none;
+}
+
+form + div + div {
+  margin-left: auto;
+  margin-right: 0;
+  height: 100%;
+  width: 20%;
+  background-image: url('img/2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+form + div + div iframe {
+  display: none;
+  border: 0;
+  zoom: 0.5;
+  background-color: white;
+  -webkit-transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  -moz-transform: scale(0.5);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.5);
+  -o-transform-origin: 0 0;
+}
+
+input[type=radio], body > input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + label + div {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+input[type=checkbox]:checked + label > span, input[type=radio]:checked + pre {
+  color: orange !important; /* S o r r y */
+}
+
+input[name=preview]:hover + iframe, input[name=preview]:checked + iframe {
+  z-index: 1;
+  display: block;
+  position: fixed;
+  width: 40%;
+  height: 200%;
+}
+
+input[name=preview]:hover + iframe {
+  z-index: 2;
+}
+
+form + div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 0;
+  height: 10%;
+  width: 20%;
+}
+
+div > form > input[type=text] {
+  position: fixed;
+  bottom: 10%;
+  left: 35%;
+}
+
+input[type=text] {
+  transition: all 200ms;
+  opacity: .7;
+  padding: 6px;
+}
+
+input[type=text]:hover {
+  opacity: .8;
+}
+
+input[type=text]:focus {
+  opacity: .9;
+}

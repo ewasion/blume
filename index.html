@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="blume.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+  </head>
+  <body>
+    <div>
+      <div>
+        <audio autoplay>
+          <source src="https://listen.moe/stream" type="audio/mpeg">
+        </audio>
+        cool audio player here
+      </div>
+      <form method="get" action="https://duckduckgo.com/">
+        <input type="text" id="search" name="q" placeholder="Search all the things" autocomplete="off" onkeydown="javascript:doTheBang(event,this.value);" onkeyup="javascript:doTheBang(event,this.value);">
+      </form>
+      <div>
+        <label for="preview-pomf"><span class="fa fa-camera"></span>&nbsp;</label>
+        <label for="preview-paste"><span class="fa fa-clipboard"></span>&nbsp;</label>
+        <label for="preview-audio"><span class="fa fa-microphone"></span>&nbsp;</label>
+        <label for="preview-reset"><span class="fa fa-times"></span></label>
+      </div>
+      <div>
+        <input type="radio" name="preview" id="preview-pomf">
+        <iframe scrolling="no" src="https://doko.moe/"></iframe>
+        <input type="radio" name="preview" id="preview-paste">
+        <iframe scrolling="no" src="https://hastebin.com/"></iframe>
+        <input type="radio" name="preview" id="preview-audio">
+        <iframe scrolling="no" src="https://vocaroo.com/?upload"></iframe>
+        <input type="radio" name="preview" id="preview-reset">
+      </div>
+    </div>
+    <input type="checkbox" id="settings-toggle">
+    <label for="settings-toggle"><span class="fa fa-cog"></span></label>
+    <div>
+      <div>
+      <a href="#" id="save">save</a> | <a href="#">load</a> | <a href="#">export</a> | <a href="#">reset</a>
+      </div>
+      <h2>Settings</h2>
+      <noscript>
+        <div>
+          <h3>Warning</h3>
+          You must enable JS for any of this to work.<br>
+          You can edit these options in the html file, it's just not as user friendly.
+        </div>
+      </noscript>
+      <div>
+        <h3>Previews</h3>
+        <span><span class="fa fa-times" id="p-camera"></span> <span class="fa fa-camera"></span> https://doko.moe/<br></span>
+        <span><span class="fa fa-times" id="p-clipboard"></span> <span class="fa fa-clipboard"></span> https://hastebin.com/<br></span>
+        <span><span class="fa fa-times" id="p-microphone"></span> <span class="fa fa-microphone"></span> https://vocaroo.com/?upload<br></span>
+        <span class="fa fa-plus" id="--p"></span>
+        <div id="add--p">
+          Icon <input type="text" placeholder="cube" size="5" id="add-p-icon"> <a href="http://fontawesome.io/icons/">(?)</a><br>
+          Link <input type="text" placeholder="https://hastebin.com/" id="add-p-link"><br>
+          <button class="ok" id="p">OK</button><button class="cancel" id="-p">Cancel</button>
+        </div>
+      </div>
+      <div>
+        <h3>Music</h3>
+        <label for="music-toggle">Play music </label><input type="checkbox" id="music-toggle" checked><br>
+        <div>
+          <span><span class="fa fa-times" id="m-1"></span> https://listen.moe/stream<br></span>
+          <span><span class="fa fa-times" id="m-2"></span> https://listen.moe/stream<br></span>
+          <span><span class="fa fa-times" id="m-3"></span> https://listen.moe/stream<br></span>
+          <span class="fa fa-plus" id="more-music"></span>
+        </div>
+      </div>
+      <div>
+        <h3>Bangs</h3>
+        Prefix: <input type="text" value="!" size="5" id="bangprefix"><br>
+        <span><span class="fa fa-times"></span> <label for="g"><input type="radio" name="defaultbang" id="g"> <pre>g</pre></label>: <a href="https://encrypted.google.com/">Google</a><br></span>
+        <span><span class="fa fa-times"></span> <label for="ddg"><input type="radio" name="defaultbang" id="ddg" checked> <pre>ddg</pre></label>: <a href="https://duckduckgo.com/?q=">DuckDuckGo</a><br></span>
+        <span><span class="fa fa-times"></span> <label for="qw"><input type="radio" name="defaultbang" id="qw"> <pre>qw</pre></label>: <a href="http://www.qwant.com">Qwant</a><br></span>
+        <span class="fa fa-plus" id="more-bangs"></span>
+      </div>
+      <div>
+        <h3>Images</h3>
+        <span><span class="fa fa-times"></span> https://my.mixtape.moe/yuujqf.jpg<br></span>
+        <span><span class="fa fa-times"></span> https://my.mixtape.moe/yuujqf.jpg<br></span>
+        <span><span class="fa fa-times"></span> https://my.mixtape.moe/yuujqf.jpg<br></span>
+        <span><span class="fa fa-plus" id="more-images"></span>
+      </div>
+      <div>
+        <h3>Custom CSS</h3>
+        <textarea></textarea>
+      </div>
+    </div>
+  </body>
+</html>
